@@ -1,0 +1,30 @@
+/* GENERAL */
+*{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    height: auto;
+}
+body{
+   @include body;
+}
+
+body.hiddin {
+    overflow: hidden;
+}
+
+/* STICKY-FOOTER */
+.site-main{
+    flex-grow: 1;
+}

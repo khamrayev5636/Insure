@@ -1,0 +1,135 @@
+
+/* =================== Header start =================== */
+
+.header {
+    padding: 31px 0;
+}
+
+.header__burger {
+    background-image: url("../images/burger.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+}
+
+.header__logo-site {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    position: fixed;
+    top: 94px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-subtitle);
+    width: 100%;
+    background-image: url("../images/iconposi.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 100px) calc(50% + 420px);
+    transition: 1.5s;
+    transform: translateX(200%);
+}
+
+.shownav .header__nav {
+    transform: translateX(0)
+}
+
+.shownav .js__open-btn {
+    background-image: url("../images/close.svg");
+    cursor: pointer;
+}
+
+
+.header__list {
+    @include list-none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+}
+
+
+.header__link , .header__button {
+    display: inline-block;
+    @include font(700, 20px , 40px);
+    text-decoration: none;
+    color:var(--main-title);
+    margin-bottom: 24px;
+    transition: 0.5s;
+    &:hover {
+        color:var(--main-text);
+    }
+}
+
+.header__button {
+    border: 1.5px solid var(--main-title);
+    width: 327px;
+    height: 56px;
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 0;
+    transition: 0.5s;
+    &:hover {
+        background-color: var(--main-subtitle);
+        color:var(--main-title);
+    }
+}
+
+
+// ================================= media ========================
+
+@include mobile-first (600px) {
+
+    .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    .header__nav {
+        position: static;
+        width: auto;
+        background-color: transparent;
+        transform: translateX(0);
+        background-image: none;
+    }
+
+    .header__link {
+        margin: 0;
+        color:var(--main-text);
+        font-size: 14px;
+        margin-left: 25px;
+        &:hover {
+            color:var(--main-subtitle);
+        }
+    }
+
+    .header__list {
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .header__burger{
+        display: none;
+    }
+
+    .header__button {
+        width: 147px;
+        border: 1.5px solid var(--main-subtitle);
+        padding: 0;
+        height: 40px;
+        color:var(--main-text);
+        font-size: 14px;
+        margin-left: 20px;
+    }
+}
+
+
+/* =================== Header end =================== */

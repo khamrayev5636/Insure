@@ -1,0 +1,136 @@
+/* =================== Blog start  ==================== */
+
+.blog {
+    margin-bottom: 80px;
+}
+
+
+.blog__title {
+    font-family: 'DM Serif Display';
+    @include font (400, 40px, 48px);
+    text-align: center;
+    letter-spacing: -0.666667px;
+    color:var(--main-subtitle);
+    margin: 0 0 80px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: calc(50% - 85px);
+        width: 150px;
+        height: 1px;
+        background-color: #C396C6;
+    }
+}
+
+.blog__list {
+    @include list-none;
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+}
+
+.blog__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 327px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 56px;
+    transition: 0.5s;
+}
+
+.blog__desc-title {
+    font-family: 'DM Serif Display';
+    @include font (400, 28px, 38px);
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.blog__desc-text {
+    font-family: 'Karla';
+    @include font (400, 16px, 26px);
+    text-align: center;
+    margin: 0;
+}
+
+
+/* ========================= 600 px ======================== */ 
+
+@include mobile-first (600px) {
+    
+    .blog__item {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    .blog__title {
+        font-size: 50px;
+    }
+   
+    .blog__desc-title {
+        font-size: 32px;
+    }
+
+    .blog__desc-text {
+        font-size: 18px;
+    }
+}
+
+
+/* ========================= 800 px ======================== */ 
+
+@include mobile-first (800px) {
+
+    .blog__list  {
+        grid-template-columns: repeat(3,auto);
+        grid-gap: 30px;
+    }
+
+    .blog__title {
+        text-align: start;
+        &::after {
+            left: 0;
+        }
+    }
+
+    .blog__item {
+        max-width: 350px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .blog__desc-title {
+        font-size: 28px;
+        text-align: start;
+    }
+
+    .blog__desc-text {
+        font-size: 13px;
+        text-align: justify;
+    }
+}
+
+
+
+/* ========================= 1000 px ======================== */ 
+
+@include mobile-first (1000px) {
+
+    .blog__desc-text {
+        font-size: 16px;
+    }
+
+    .blog__title  {
+        font-size: 72px;
+        line-height: 64px;
+        margin-bottom: 96px;
+    }
+
+}
+
+/* =================== Blog end  ==================== */

@@ -1,0 +1,86 @@
+/* =================== Work start ============== */
+
+.work {
+    margin-bottom: 140px;
+}
+
+.work__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../images/aside-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 72px 24px;
+}
+
+
+.work__title {
+    font-family: 'DM Serif Display';
+    @include font (400, 40px, 40px);
+    text-align: center;
+    max-width: 327px;
+    width: 100%;
+    letter-spacing: -0.555556px;
+    color:var(--main-title);
+    margin-bottom: 40px;
+}
+
+
+.work__btn {
+    display: inline-block;
+    @include font(700px, 13px, 15px);  
+    width: 160px;
+    height: 40px;
+    border: 1.5px solid var(--main-title);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    color:var(--main-title);
+    transition: 0.5s;
+    &:hover {
+        background-color: var(--main-title);
+        color:var(--main-subtitle);
+    }
+}
+
+
+
+/* ===================== 600 px ================ */ 
+
+
+@include mobile-first (600px) {
+    .work__wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.work__title {
+    max-width: 480px;
+    width: 100%;
+}
+
+
+
+/* ===================== 1100 px ================ */ 
+
+
+@include mobile-first (1100px) {
+
+
+    .work__wrapper {
+        padding: 69px 80px;
+    }
+
+
+    .work__title  {
+        @include font (400 , 56px , 56px);
+        margin: 0;
+        text-align: start;
+    }
+
+}
+
+/* =================== Work end ============== */
