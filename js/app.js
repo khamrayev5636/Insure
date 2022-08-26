@@ -3,7 +3,10 @@ let elBody = document.querySelector("body");
 
 elBurgerBtn.addEventListener("click" , function(){
     elBurgerBtn.closest(".header").classList.toggle("shownav");
-    elBody.classList.add("hiddin");
+})
+
+elBurgerBtn.addEventListener("click" , function(){
+    elBody.classList.toggle("hiddin");
 })
 
 
